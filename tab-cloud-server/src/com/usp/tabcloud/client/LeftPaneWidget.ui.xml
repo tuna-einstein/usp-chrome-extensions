@@ -1,0 +1,41 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		
+		.actionLink:HOVER {
+			background-color: #D8E9F0;
+			border: 1px SOLID blue;
+			font-size: 1.4em;
+			color: red;
+		}
+		
+		.actionLink {
+			font-size: 1.2em;
+			margin-top: 0.5em;
+			border: 1px SOLID green;
+			display: block;
+		}
+		
+		.panel-border {
+			border: 1px SOLID red;
+		}
+	</ui:style>
+	<gwt:ScrollPanel addStyleNames="{style.panel-border}">
+		<gwt:FlowPanel>
+
+			<gwt:Anchor ui:field="receivedTabs" addStyleNames="{style.actionLink}">
+				Received Tabs
+			</gwt:Anchor>
+
+			<gwt:Anchor ui:field="sentTabs" addStyleNames="{style.actionLink}">
+				Sent Tabs
+			</gwt:Anchor>
+
+		</gwt:FlowPanel>
+
+	</gwt:ScrollPanel>
+</ui:UiBinder> 

@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res' type='com.usp.tabcloud.client.Resources' />
+	<ui:style>
+		.stackPanelStyle {
+			font-weight: bold;
+			font-color: Red;
+			margin: 10px;
+			text-align: left;
+		}
+		.scrollPanelStyle{
+        height:100%;
+        width:800px;
+    }
+    
+    .imageStyle {
+	margin-top:200px;
+	}
+	</ui:style>
+	<gwt:ScrollPanel  addStyleNames="{style.scrollPanelStyle}">
+		<gwt:FlowPanel>
+		<gwt:Image resource='{res.logo}' ui:field="busyImage" addStyleNames="{style.imageStyle}"/>
+		<gwt:FlowPanel ui:field="mainPanel" addStyleNames="{style.stackPanelStyle}"/>
+		</gwt:FlowPanel>
+	</gwt:ScrollPanel>
+</ui:UiBinder> 

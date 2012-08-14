@@ -1,0 +1,55 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+        xmlns:g="urn:import:com.google.gwt.user.client.ui">
+        <ui:style>
+                .important {
+                        font-weight: bold;
+                }
+                
+                .inlineDisplay {
+					display: inline;
+
+				}
+                
+                .panel-border {
+                border: 1px SOLID red;
+                }
+                
+                .ownerEmail-label {
+                        display:block;
+                        float:left;
+                        font-size: 1.5em;
+                        margin:15px;
+                        font-weight: bold;
+                        
+                }
+                .logout-label {
+                        display:block;
+                        font-size:1.5em;
+                        float:right;
+                        margin:15px;
+                        font-weight: bold;
+                        
+                }
+                .heading {
+                        font-size: 2em;
+                        text-align: center;
+
+                }
+        </ui:style>
+        <g:FlowPanel addStyleNames="{style.panel-border}">
+        
+        <g:Label addStyleNames="{style.heading}">
+        Tab Pool Management
+        </g:Label>
+         <g:Anchor href="https://chrome.google.com/webstore/detail/jagibocbmjaocnecajagkjeaklpnmaga"
+         target="_blank" addStyleNames="{style.inlineDisplay}">
+        Please find the chrome plugin here.
+        </g:Anchor>
+    		<g:Label ui:field="ownerEmail" addStyleNames="{style.ownerEmail-label}"/>
+        <g:Anchor ui:field="logout" addStyleNames="{style.logout-label}" href="javascript:;">
+         Logout
+        </g:Anchor>
+       
+        </g:FlowPanel>
+</ui:UiBinder> 
