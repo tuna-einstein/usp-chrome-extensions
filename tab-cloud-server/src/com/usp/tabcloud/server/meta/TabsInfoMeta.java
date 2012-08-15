@@ -1,6 +1,6 @@
 package com.usp.tabcloud.server.meta;
 
-//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2012-08-14 12:09:29")
+//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2012-08-14 23:25:25")
 /** */
 public final class TabsInfoMeta extends org.slim3.datastore.ModelMeta<com.usp.tabcloud.shared.model.TabsInfo> {
 
