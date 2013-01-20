@@ -1,0 +1,17 @@
+{
+  "name": "Tab pool to share tabs",
+  "version": "1.0",
+  "description": "Tab sharing with other users",
+  "browser_action": {
+    "default_title": "Tab Pool",
+    "default_icon": "icon.jpeg",
+    "default_popup":"Gwt_test.html"
+  },
+ "manifest_version": 2,
+ 
+  "permissions": [
+    "tabs",
+    "notifications",
+    "http://usp046.appspot.com/*"
+  ]
+}

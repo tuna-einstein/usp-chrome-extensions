@@ -1,0 +1,66 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res' type='com.usp.client.Resources' />
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		
+		.inlineDisplay {
+			display: inline;
+		}
+		
+		.textLabel {
+			font-weight: bold;
+			margin-right: 10px;
+			font-size: 1.2em;
+		}
+		
+		.border {
+			border: solid 1px;
+		}
+		
+		.responseStyle {
+			font-size: 1.5em;
+			font-weight: bold;
+			color: red;
+			padding: 100px;
+		}
+		
+		.anchorStyle {
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+	</ui:style>
+	<gwt:HTMLPanel addStyleNames="{style.border}">
+
+		<gwt:FormPanel ui:field="formPanel">
+			<gwt:FlowPanel>
+				<gwt:Label addStyleNames="{style.textLabel}"> Recepient Email Address : </gwt:Label>
+				<gwt:TextBox ui:field="receiverEmailId" visibleLength="40"
+					addStyleNames="{style.textLabel}" />
+				<gwt:Label addStyleNames="{style.textLabel}"> Subject : </gwt:Label>
+				<gwt:TextBox ui:field="subjectText" visibleLength="40"
+					addStyleNames="{style.textLabel} {style.inlineDisplay}" />
+				<gwt:FlowPanel ui:field="mainPanel">
+				</gwt:FlowPanel>
+				<gwt:Button ui:field="submitButton">
+					Submit
+				</gwt:Button>
+			</gwt:FlowPanel>
+		</gwt:FormPanel>
+		<gwt:FlowPanel ui:field="responsePanel">
+			<gwt:Label addStyleNames="{style.responseStyle}">
+				Tab urls are sent successfully.
+			</gwt:Label>
+		</gwt:FlowPanel>
+		<gwt:Image resource='{res.logo}' ui:field="busyImage"
+			visible="false" />
+		<gwt:Image resource='{res.thanks}' ui:field="thanksImage"
+			visible="false" />
+		<gwt:Anchor ui:field="manageTabsAnchor"  href="javascript:;"
+		addStyleNames="{style.anchorStyle}">
+			Manage your sent and received Tabs</gwt:Anchor>
+	</gwt:HTMLPanel>
+</ui:UiBinder> 
