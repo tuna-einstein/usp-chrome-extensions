@@ -1,0 +1,82 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res' type='com.usp.tabsharing.client.Resources' />
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+
+		.leaveMargin {
+			margin: 10px;
+		}
+
+		.textLabel {
+			font-weight: bold;
+			margin-right: 10px;
+			font-size: 1.2em;
+		}
+
+		.border {
+			border: solid 1px;
+		}
+
+		.errorStyle {
+			font-weight: bold;
+			color: red;
+		}
+		
+		.anchorStyle {
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+	</ui:style>
+	<gwt:HTMLPanel addStyleNames="{style.border}">
+		<gwt:FlowPanel>
+			<gwt:FlowPanel ui:field="mainPanel" visible="false">
+				<gwt:HorizontalPanel spacing="10">
+					<gwt:Label addStyleNames="{style.important}"> Message to post </gwt:Label>
+					<gwt:TextBox ui:field="subjectText" visibleLength="40"
+						addStyleNames="{style.important}">
+						check these
+						awesome pages :)
+					</gwt:TextBox>
+				</gwt:HorizontalPanel>
+				<gwt:HorizontalPanel spacing="10"
+					addStyleNames="{style.leaveMargin}">
+					<gwt:Button ui:field="copyToClipBoardButton"
+						addStyleNames="{style.important}">
+						Copy these Urls to Clipboard
+					</gwt:Button>
+					<gwt:Button ui:field="submitButton" addStyleNames="{style.important}">
+						Share
+						these Urls in Google+
+					</gwt:Button>
+					
+					<gwt:Button ui:field="mailButton" addStyleNames="{style.important}">
+						Email these Urls
+					</gwt:Button>
+				</gwt:HorizontalPanel>
+
+				<gwt:Label addStyleNames="{style.errorStyle}" ui:field="errorLabel"
+					visible="false">
+					Please select at least one tab.
+				</gwt:Label>
+				<gwt:HorizontalPanel spacing="10">
+					<gwt:Label addStyleNames="{style.important}">
+						Select All Urls
+					</gwt:Label>
+					<gwt:CheckBox ui:field="selectAllCheckbox"
+						addStyleNames="{style.important}" />
+				</gwt:HorizontalPanel>
+
+			</gwt:FlowPanel>
+
+
+		</gwt:FlowPanel>
+		<gwt:Image resource='{res.logo}' ui:field="busyImage"
+			visible="false" />
+		<gwt:Image resource='{res.thanks}' ui:field="thanksImage"
+			visible="false" />
+	</gwt:HTMLPanel>
+</ui:UiBinder> 

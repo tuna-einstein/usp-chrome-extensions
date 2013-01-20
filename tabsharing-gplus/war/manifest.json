@@ -1,0 +1,19 @@
+{
+  "name": "Share Urls",
+  "version": "1.1",
+  "description": "The easiest way to share interesting webpages through mail and Google+.",
+  "browser_action": {
+    "default_title": "Share Urls",
+    "default_icon": "icon.png",
+    "default_popup":"Tabsharing_gplus.html"
+  },
+ "manifest_version": 2,
+ "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "tabs",
+    "clipboardWrite",
+    "http://usp046.appspot.com/*"
+  ]
+}
